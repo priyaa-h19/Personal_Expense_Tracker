@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Personal Expense Tracker</h1>
+
+    <!-- Form to Add Expense -->
+    <div class="form">
+      <input type="text" id="title" placeholder="Expense Title">
+      <input type="number" id="amount" placeholder="Amount">
+      <select id="category">
+        <option value="Food">🍔 Food</option>
+        <option value="Transport">🚌 Transport</option>
+        <option value="Shopping">🛍 Shopping</option>
+        <option value="Bills">💡 Bills</option>
+        <option value="Other">📌 Other</option>
+      </select>
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <!-- Expense List -->
+    <h2>Expenses</h2>
+    <div class="expense-list" id="expenseList"></div>
+
+    <!-- Chart -->
+    <h2>Expense Breakdown</h2>
+    <canvas id="expenseChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
